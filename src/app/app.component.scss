@@ -1,0 +1,39 @@
+.toolbar {
+    background: #414e58;
+    color: #fff;
+    padding: 0px;
+
+    .logo-box {
+        margin-left: 30%;
+    }
+}
+
+.mat-drawer {
+    top: 56px;
+    max-height: 17em;
+    width: 100%;
+    border-bottom: .25rem solid #f58025;
+}
+
+.sidenav-list-box {
+    padding-left: 2em;
+    padding-right: 2em;
+
+    .mat-list-item {
+        height: 40px;
+    }
+
+    ::ng-deep .mat-list-item-content {
+        padding: 0px !important;
+    }
+
+    .item-text {
+        text-transform: uppercase;
+    }
+
+    .item-link {
+        font-size: .875em;
+        height: 2em;
+    }
+}
+

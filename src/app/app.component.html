@@ -1,0 +1,36 @@
+
+
+<mat-sidenav-container fullscreen hasBackdrop="false">
+  <mat-sidenav #sidenav mode="over">
+    <div class="sidenav-list-box">
+      <mat-list role="list">
+        <mat-list-item class="item-text">Small Business</mat-list-item>
+        <mat-list-item class="item-text">Corporate & Institutional</mat-list-item>
+        <mat-list-item class="item-text">About</mat-list-item>
+      </mat-list>
+      <mat-divider></mat-divider>
+      <mat-list role="list">
+        <mat-list-item class="item-link">Español</mat-list-item>
+        <mat-list-item class="item-link">Customer Service</mat-list-item>
+        <mat-list-item class="item-link">Locations</mat-list-item>
+        <mat-list-item class="item-link">Security</mat-list-item>
+      </mat-list>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="toolbar">
+      <button mat-icon-button aria-label="icon-button with menu icon" (click)="sidenav.toggle()">
+        <mat-icon *ngIf="sidenav.opened">close</mat-icon>
+        <mat-icon *ngIf="!sidenav.opened">menu</mat-icon>
+      </button>
+      <span class="logo-box"><img src="../assets/img/logo.png" alt="logo"></span>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
