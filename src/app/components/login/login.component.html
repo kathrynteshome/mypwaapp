@@ -1,0 +1,28 @@
+<div class="login-form">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
+    <div fxLayout="row" style="text-align: center;margin-top: 6em;">
+      <mat-card style="width: 100%">
+        <mat-card-content>
+          <label class="label_User" >User Id (required)</label>
+          <mat-form-field class="full-width" appearance="outline">
+            <!-- <mat-label>User Id (required)</mat-label> -->
+            <input matInput formControlName="userId">
+            <mat-error *ngIf="hasError('userId', 'required')">
+              UserId is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <label class="label_User" >User Id (required)</label>
+          <mat-form-field class="full-width" appearance="outline">
+            <!-- <mat-label>Password (required)</mat-label> -->
+            <input type="password" matInput formControlName="password">
+            <mat-error *ngIf="hasError('password', 'required')">
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <button type="submit" [disabled]="loginForm.invalid" class="btn-login" mat-raised-button color="primary">Login</button>
+        </mat-card-content>
+        <a routerLink="signup">SignUp</a>
+      </mat-card>
+    </div>
+  </form>
+</div>

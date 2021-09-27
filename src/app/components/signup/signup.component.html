@@ -1,0 +1,53 @@
+<div class="signup-form">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit($event)">
+      <div fxLayout="row" style="text-align: center;">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Personal Information</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <mat-form-field class="full-width">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="firstName">
+              <mat-error *ngIf="hasError('firstName', 'required')">
+                First Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Middle Name</mat-label>
+              <input matInput formControlName="middleName">
+              <mat-error *ngIf="hasError('middleName', 'required')">
+                Middle Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Last Name</mat-label>
+              <input matInput formControlName="lastName">
+              <mat-error *ngIf="hasError('lastName', 'required')">
+                Last Name is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>First Name</mat-label>
+              <input matInput formControlName="suffix">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Date of Birth</mat-label>
+              <input matInput formControlName="dob">
+              <mat-error *ngIf="hasError('dob', 'required')">
+                Date of Birth is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width">
+              <mat-label>Date of Birth</mat-label>
+              <input matInput formControlName="primaryPhone">
+              <mat-error *ngIf="hasError('primaryPhone', 'required')">
+                Primary Phone is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+            <button type="submit" [disabled]="signupForm.invalid" class="btn-signup" mat-raised-button color="primary">SignUp</button>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </form>
+  </div>
