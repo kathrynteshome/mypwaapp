@@ -1,7 +1,7 @@
 .signup-form {
     .mat-card {
-        box-shadow: none;
-        border-radius: 0px;
+        // box-shadow: none;
+        border-radius: 15px;
 
         .btn-signup {
             width: 10em;
@@ -15,4 +15,20 @@
     ::ng-deep .mat-card-header-text {
         margin: 0px !important;
     }
+}
+
+.title {
+    font-weight: bolder;
+    font-family: Roboto;
+    margin-bottom: 5px;
+    color: #435d73;
+    font-size: 1.5rem;
+}
+
+.personal_content {
+    width: 350px !important;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
 }
