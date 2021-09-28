@@ -1,9 +1,14 @@
 <div class="login-form">
+  <div style="text-align: center;">
+    <h4 class="client-login-text">Log in to your account</h4>
+    <span class="newuser">New User?&nbsp;<a id="reg1" style="color:#445c69 !important"><u style="cursor: pointer;">Register now</u></a></span>
+  </div>
+
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit($event)">
-    <div fxLayout="row" style="text-align: center;margin-top: 6em;">
-      <mat-card style="width: 100%">
+    <div fxLayout="row" style="text-align: center;margin-top: 2em;">
+      <mat-card class="logcontent_card" style="width: 100%">
         <mat-card-content>
-          <label class="label_User" >User Id (required)</label>
+          <label class="label_User">User Id : </label>
           <mat-form-field class="full-width" appearance="outline">
             <!-- <mat-label>User Id (required)</mat-label> -->
             <input matInput formControlName="userId">
@@ -11,7 +16,7 @@
               UserId is <strong>required</strong>
             </mat-error>
           </mat-form-field>
-          <label class="label_User" >User Id (required)</label>
+          <label class="label_User">Password: </label>
           <mat-form-field class="full-width" appearance="outline">
             <!-- <mat-label>Password (required)</mat-label> -->
             <input type="password" matInput formControlName="password">
@@ -19,7 +24,8 @@
               Password is <strong>required</strong>
             </mat-error>
           </mat-form-field>
-          <button type="submit" [disabled]="loginForm.invalid" class="btn-login" mat-raised-button color="primary">Login</button>
+          <button type="submit" [disabled]="loginForm.invalid" class="btn-login" mat-raised-button
+            >Login</button>
         </mat-card-content>
         <a routerLink="signup">SignUp</a>
       </mat-card>

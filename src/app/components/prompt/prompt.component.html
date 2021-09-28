@@ -1,10 +1,13 @@
-<mat-toolbar *ngIf="data.mobileType === 'android' || data.mobileType === 'browser'" color="primary"
-  class="android-prompt">
-  <button mat-button (click)="installPwa()" color="primary" class="" > Add to Home screen</button>
-  <button mat-icon-button (click)="close()">
-    <mat-icon>close</mat-icon>
+<div>
+  <mat-toolbar *ngIf="data.mobileType === 'android' || data.mobileType === 'browser'" 
+  class="android-prompt" class="add_hme_screen">
+  <button mat-button (click)="installPwa()" style="text-align: center;"> ADD TO HOME SCREEN</button>
+  <button (click)="close()">
+    <i class="fa fa-times"></i>
   </button>
 </mat-toolbar>
+</div>
+
 
 <div *ngIf="data.mobileType === 'ios'" class="ios-prompt">
   <button class="close-ios-inv" mat-button color="primary" (click)="close()">
