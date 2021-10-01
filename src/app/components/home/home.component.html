@@ -1,1 +1,23 @@
-<p>home works!</p>
+<div fxLayout="column" class="container">
+    <div fxLayout="column" class="info-box">
+        <p>To Complete your purchase add this single-use card to your Apple Wallet to pay at the register.</p>
+        <span>
+            Use Apple Wallet to complete your or click View Card  Numbers if requested by the cashier.
+            This screen will stay available until the transaction is completed.
+        </span>
+    </div>
+    <div fxLayout="column" class="card-box">
+        <div class="atm-card-img-box">
+            <img *ngIf="!showNumberCard" src="../../../assets/img/pnccard.jpeg" class="atm-card" alt="atm card">
+            <img *ngIf="showNumberCard" src="../../../assets/img/pncnumbercard.png" class="atm-card" alt="atm card">
+        </div>
+        <span class="card-info">This single use card can only be used at <em>Merchant Vendor</em></span>
+    </div>
+    <div fxLayout="column" fxLayoutGap="20px" class="buttons-box">
+        <button mat-raised-button class="btn-apple">
+            <mat-icon aria-hidden="false" aria-label="wallet icon">account_balance_wallet</mat-icon>
+            Add to Apple Wallet
+        </button>
+        <button mat-raised-button class="btn-card-number" (click)="toggleCard()">View Card Numbers</button>
+    </div>
+</div>

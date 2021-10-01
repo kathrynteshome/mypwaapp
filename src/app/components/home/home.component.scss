@@ -1,0 +1,48 @@
+.container {
+  padding: 16px;
+
+  .info-box {
+    padding-bottom: 16px;
+    text-align: center;
+
+    p {
+      color: #f58025;
+    }
+
+    span {
+      font-size: 13px;
+    }
+  }
+
+  .card-box {
+    padding-bottom: 16px;
+    text-align: center;
+    .atm-card-img-box {
+      text-align: center;
+
+      .atm-card {
+        height: 200px;
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+    .card-info {
+      font-size: 11px;
+    }
+  }
+
+  .buttons-box {
+    padding: 16px 0;
+
+    .btn-apple {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .btn-card-number {
+      border: 1px solid #000;
+    }
+  }
+}
+
