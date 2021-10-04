@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
+import { GooglePayComponent } from 'src/app/google-pay/google-pay.component';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   showNumberCard = false;
+  @Output() any?: GooglePayComponent;
 
   constructor() { }
 

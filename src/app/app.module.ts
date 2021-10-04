@@ -17,6 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 import { PromptComponent } from './components/prompt/prompt.component';
 import { PwaService } from './services/pwa.service';
+import { GooglePayComponent } from './google-pay/google-pay.component';
 
 const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt();
 
@@ -28,6 +29,7 @@ const initializer = (pwaService: PwaService) => () => pwaService.initPwaPrompt()
     SignupComponent,
     FooterComponent,
     PromptComponent,
+    GooglePayComponent,
   ],
   imports: [
     BrowserModule,
